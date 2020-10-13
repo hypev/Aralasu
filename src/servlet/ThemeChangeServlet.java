@@ -1,6 +1,7 @@
 package servlet;
 
 import db.AuthToken;
+import db.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -31,6 +32,15 @@ public class ThemeChangeServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        try {
+            AuthToken.checkSession(request, response);
+            User user = (User)request.getSession().getAttribute("uid");
+            if (user != null) {
+                response.sendRedirect("/");
+            } else response.sendRedirect("/login");
+        } catch (Exception e) {
+            e.printStackTrace();
+            request.getRequestDispatcher("/404.jsp");
+        }
     }
 }

@@ -5,10 +5,14 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/dc04de3ae3.js" crossorigin="anonymous"></script>
 <script src="https://cdn.tiny.cloud/1/uqtysfakb28uziukwl8ogrxwriwuvgi6nu91ukod2m3tg8sd/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-<script>
-    tinymce.init({ selector:'textarea' });
-</script>
 <%@include file="theme.jsp"%>
 <%
     String theme = (String)request.getAttribute("theme");
 %>
+<script>
+    tinymce.init({
+        selector:'textarea',
+        skin: <%=theme.equals("dark") %> ? 'oxide-dark' : 'oxide',
+        content_css: <%=theme.equals("dark") %> ? 'dark' : 'default',
+    });
+</script>

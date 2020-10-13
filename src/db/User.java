@@ -33,7 +33,11 @@ public class User {
     public void setFullName(String fullName) { this.fullName = fullName; }
     public Date getBirthdate() { return birthdate; }
     public void setBirthdate(Date birthdate) { this.birthdate = birthdate; }
-    public String getPictureUrl() { return pictureUrl; }
+    public String getPictureUrl() {
+        String url = pictureUrl;
+        if (url.equals("")) url = "https://www.flaticon.com/svg/static/icons/svg/847/847969.svg";
+        return url;
+    }
     public void setPictureUrl(String pictureUrl) { this.pictureUrl = pictureUrl; }
 
     private LocalDate dateToLocalDate(Date date) {

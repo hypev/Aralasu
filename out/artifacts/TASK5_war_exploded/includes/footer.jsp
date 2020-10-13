@@ -3,3 +3,9 @@
         Copyright &copy;<a href="/" style="color: white"> aralasu.kz</a> 2020
     </div>
 </footer>
+<script>
+    function sendMessageTo(id, name) {
+        $("#userId").val(id);
+        $("#userName").text(name);
+    }
+</script>

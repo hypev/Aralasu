@@ -10,16 +10,16 @@
                     <a class="nav-link" href="/"><i class="fas fa-newspaper"></i> Feed</a>
                 </li>
                 <li class="nav-item active ml-3">
-                    <a class="nav-link" href="#"><i class="fas fa-user-friends"></i> My Friends</a>
+                    <a class="nav-link" href="/my-friends"><i class="fas fa-user-friends"></i> My Friends</a>
                 </li>
                 <li class="nav-item active ml-3">
                     <a class="nav-link" href="#"><i class="fas fa-users"></i> Groups</a>
                 </li>
                 <li class="nav-item active ml-3">
-                    <a class="nav-link" href="/my-posts"><i class="fas fa-edit"></i> My Posts</a>
+                    <a class="nav-link" href="/my-profile"><i class="fas fa-edit"></i> My Posts</a>
                 </li>
                 <li class="nav-item active ml-3">
-                    <a class="nav-link" href="#"><i class="fab fa-telegram-plane"></i> Messages</a>
+                    <a class="nav-link" href="/chats"><i class="fab fa-telegram-plane"></i> Messages</a>
                 </li>
                 <li class="nav-item active ml-3">
                     <a class="nav-link" href="#"><i class="fas fa-images"></i> Pictures</a>
